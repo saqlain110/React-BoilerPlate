@@ -14,7 +14,7 @@ import { useForm } from "react-hook-form";
 import useDebounce from "../../../hooks/useDebounce";
 
 export const useUserList = () => {
-  const [query, setQuery] = useState({ page: 1, limit: 2, searchKey: "" });
+  const [query, setQuery] = useState({ page: 1, limit: 10, searchKey: "" });
   const debouncedQuery = useDebounce(query);
   const formDisclosure = useDisclosure();
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ export const useUserList = () => {
 
   const onQueryChange = (updatedQuery) => {
     setQuery((prev) => ({ ...prev, ...updatedQuery }));
-  }
+  };
 
   const onEdit = (item) => {
     setSelected(item);

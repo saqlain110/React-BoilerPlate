@@ -2,6 +2,7 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import { Delete, Get, Post, Put } from "../../api";
 import { API_CONSTANTS } from "../../constants/api";
 import { appendQueryParams } from "../../utils/queryUtils";
+import { DummyUserList } from "../../constants/trash";
 
 export const useUsers = (params) => {
   return useQuery({
@@ -10,7 +11,8 @@ export const useUsers = (params) => {
       const data = await Get({
         path: `${API_CONSTANTS.USERS.base}?${appendQueryParams(params)}`,
       });
-      return data;
+      // return data;
+      return DummyUserList;
     },
     keepPreviousData: true,
   });
