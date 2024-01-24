@@ -17,27 +17,27 @@ export const ACTIONS = {
 export const COLOR_MODES = {
   LIGHT: "light",
   DARK: "dark",
-}
+};
 
 export const VERIFICATION_STATUS = {
   0: "Unverified",
   1: "Verified",
-}
+};
 
 export const VERIFICATION_STATUSES = {
   Unverified: 0,
   Verified: 1,
-}
+};
 
 export const USER_TYPES = {
   ADMIN: 1,
   USER: 2,
-}
+};
 
 export const GENERAL_STATUS = {
   ACTIVE: 1,
   DEACTIVATED: 2,
-}
+};
 
 export const INTERVAL = {
   DAY: 1,
@@ -45,15 +45,4 @@ export const INTERVAL = {
   MONTH: 3,
   YEAR: 4,
   FOREVER: 5,
-}
-
-
-export const INTEGRATION = {
-  SKINIVE: 1,
-  BINNAH: 2
-}
-
-export const INTEGRATION_LABELS = {
-  1: "Skinive",
-  2: "Binnah"
-}
+};
