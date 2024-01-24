@@ -9,7 +9,6 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
-import { useShallow } from "zustand/react/shallow";
 import { getColor, colorKeys } from "../../../constants/colors";
 import IMAGES from "../../../constants/images";
 import COLOR_MODES from "../../../constants/colorModes";
@@ -51,7 +50,12 @@ const Login = () => {
         setItem(STORAGE_KEYS.TOKEN, token);
         setIsAuth(true);
       })
-      .catch((error) => console.warn(error));
+      .catch((error) => {
+        console.warn(error)
+        
+        //This is temporary, When API is ready we will remove this
+        setIsAuth(true);
+      });
   }
 
   return (
@@ -85,7 +89,7 @@ const Login = () => {
                   fontSize="13px"
                   color={getColor(colorKeys.white, colorMode)}
                 >
-                  Sign in to continue to Y Drive SU
+                  Sign in to continue to React Boilerplate
                 </Text>
               </Box>
 

@@ -41,21 +41,4 @@ export const API_CONSTANTS = {
     me: "/users/me",
     status: "/users/status",
   },
-  COMPANY: {
-    base: "/company",
-    register: "/company/register",
-    companyRules: "/config/update-company-rules/:id",
-    userRules: "/config/update-company-user-rules/:id",
-  },
-  INTEGRATION: {
-    base: "/integration",
-    register: "/integration/register",
-    validate: "/integration/skinive/validate",
-    predict: "/integration/skinive/predict",
-  },
-  SESSION: {
-    base: "/user-session-history",
-    admin: "/user-session-history/admin",
-    filterKeys: ['integration', 'userId', 'companyId', 'sessionDate', 'page', 'limit', 'searchKey']
-  },
 };
